@@ -7,6 +7,12 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.html");
     exit();
 }
+
+$db = "workouts";
+$sql = "CREATE TABLE IF NOT EXISTS $db (entry_no INTEGER PRIMARY KEY AUTO_INCREMENT, user_id INTEGER,date TEXT,exercise_type TEXT ,sets INTEGER,reps INTEGER, weight DOUBLE, duration INTEGER, notes TEXT)";
+// mysqli_query($conn, $sql);
+$conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

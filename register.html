@@ -6,19 +6,19 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <form action="register.php" method="POST">
+  <form id="register" action="register.php" method="POST">
     <h2>Register</h2>
 
     <label for="name">Name:</label><br>
-    <input type="text" name="name" id="name" required><br>
+    <input type="text" name="name" id="name" placeholder="Enter a Username..." required style="width: 80%;"><br>
 
     <label for="email">Email:</label><br>
-    <input type="email" name="email" id="email" required><br>
-
+    <input type="email" name="email" id="email" placeholder="Enter Your Email (eg: email@example.com)" pattern="[a-zA-z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required style="width: 80%;"><br>
+<!-- pattern="+@example\.com" -->
     <label for="password">Password:</label><br>
-    <input type="password" name="password" id="password" required><br>
+    <input type="password" name="password" id="password" placeholder="Please Enter a Password..." required style="width: 80%;"><br>
 
-    <button type="submit">Register</button>
+    <button type="submit" style="width: 87%;margin-top: 1.5rem;">Register</button>
   </form>
 
   <p>Already have an account? <a href="login.html">Login</a></p>
